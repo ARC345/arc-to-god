@@ -1,0 +1,55 @@
+{
+  "arch": "gpt2",
+  "size": "s",
+  "params_total": 19308544,
+  "params_non_embedding": 18915328,
+  "target_params": 20000000,
+  "tokens": 99991552,
+  "steps": 6103,
+  "val_bpc": 1.4503055260041395,
+  "test_bpc": 1.4201743462639542,
+  "copy_bpc": 4.26398755828441,
+  "train_tokens_per_s": 90332.9784669268,
+  "peak_mem_gb": 2.26310912,
+  "train_time_s": 1106.9218982590003,
+  "wall_time_s": 1191.003250793,
+  "device": "Tesla T4",
+  "amp": "float16",
+  "torch": "2.11.0+cu128",
+  "git_commit": "1b60580",
+  "run": "gpt2-s-20261010-180918",
+  "config": {
+    "data": {
+      "dir": "/tmp/enwik8"
+    },
+    "train": {
+      "seq_len": 512,
+      "batch_size": 32,
+      "micro_batch_size": 32,
+      "tokens": 100000000,
+      "lr": 0.001,
+      "min_lr_frac": 0.1,
+      "warmup_tokens": 2000000,
+      "weight_decay": 0.1,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "grad_clip": 1.0,
+      "seed": 0,
+      "compile": false,
+      "log_every_steps": 50,
+      "eval_every_tokens": 5000000,
+      "eval_batches": 50
+    },
+    "model": {
+      "dropout": 0.0,
+      "d_model": 512,
+      "n_layer": 6,
+      "n_head": 8
+    },
+    "arch": "gpt2",
+    "size": "s",
+    "target_params": 20000000
+  }
+}
