@@ -1,0 +1,10 @@
+# GPT-2 baseline. Non-embedding params ~= 12 * d_model^2 * n_layer.
+sizes:
+  s: # ~18.9M
+    d_model: 512
+    n_layer: 6
+    n_head: 8
+  m: # ~56.7M
+    d_model: 768
+    n_layer: 8
+    n_head: 12
